@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Table Positions</h1>
+    <button ui-sref="position">Criar</button>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </thead>    
+                <tbody>
+                   <div class="row">
+                    <div class="col-md-12">
+                        <tr ng-repeat="position in positionsName">
+                            <td>{{ position.id }}</td>
+                            <td>{{ position.name }}</td>
+                            <td>
+                                <button ng-click="deletePosition(position.id)">Deletar</button>
+                                <button ui-sref="position({ positionId: position.id })">Editar</button>
+                            </td>
+                        </tr>
+                    </div>
+                   </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
