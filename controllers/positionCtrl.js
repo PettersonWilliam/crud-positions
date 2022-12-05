@@ -6,7 +6,7 @@ myApp.controller("PositionCtrl", ['$scope', '$stateParams', '$state', 'PositionS
             },
             id: $stateParams.positionId            
         };
-
+        
         PositionService.edit(options).then(() => {
             $state.go('home');
         }).catch(error => {

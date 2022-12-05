@@ -11,6 +11,7 @@ myApp.controller("HomeCtrl", ['$scope','PositionService', function($scope, Posit
         PositionService.deletePosition(id).then(response => {
             list();
         });
+    
     };
 
     $scope.deletePosition = deletePosition;
